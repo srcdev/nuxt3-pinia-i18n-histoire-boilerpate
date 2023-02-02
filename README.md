@@ -57,13 +57,9 @@ npm install
 npm run dev
 ```
 
-## Deploy update website to server
-
-```node
-npm run deploy
-```
-
 ## Run Histoire server
+
+I'd usually use Storybook, but playing with Histoire, it doesn't like i18n though.
 
 ```node
 npm run story:dev
@@ -71,7 +67,7 @@ npm run story:dev
 
 ## Font Awesome Vue loader install
 
-Use the following cmd to install Vue3 plugin
+Use the following cmd to install Vue3 plugin, This causes an error with just doing an `npm install` for reason
 
 ```bash
 npm i --save @fortawesome/vue-fontawesome@latest-3
