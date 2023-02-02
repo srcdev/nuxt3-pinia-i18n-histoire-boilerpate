@@ -1,0 +1,22 @@
+RewriteEngine On
+
+
+# Send www.host.domain to host.domain
+RewriteBase /
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+
+# Now send http to https
+RewriteCond %{HTTPS} off
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R,L]
+
+# Exclude api directory
+RewriteRule ^api($|/) - [L,NC]
+
+RewriteBase /
+
+# All other files will be considered part of Vue APP
+RewriteRule ^index\.html$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.html [L]

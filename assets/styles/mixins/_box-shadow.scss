@@ -1,0 +1,22 @@
+@mixin inputBox() {
+  border: 0;
+  border-radius: 1px;
+  border: 1px solid $inputBorderLightMode;
+  box-shadow: none;
+  //box-shadow: 0 0 0px 1px $inputBorderLightMode;
+}
+
+@mixin inputBoxActive() {
+  border: 1px solid $inputBorderLightMode;
+  // box-shadow: 0 0 0px 2px $inputBorderLightMode;
+}
+
+@mixin inputBoxError() {
+  border: 1px solid $inputBorderErrorLightMode;
+  // box-shadow: 0 0 0px 1px $inputBorderErrorLightMode;
+}
+
+@mixin inputBoxErrorActive() {
+  border: 1px solid $inputBorderErrorLightMode;
+  // box-shadow: 0 0 0px 2px $inputBorderErrorLightMode;
+}

@@ -1,0 +1,31 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "nuxi dev",
+    "build": "nuxi build",
+    "start": "node .output/server/index.mjs",
+    "generate": "nuxt generate",
+    "story:dev": "histoire dev",
+    "story:build": "histoire build",
+    "story:preview": "histoire preview"
+  },
+  "devDependencies": {
+    "@histoire/plugin-nuxt": "^0.12.4",
+    "@histoire/plugin-vue": "^0.12.4",
+    "@nuxtjs/i18n": "^8.0.0-beta.7",
+    "dotenv": "^16.0.3",
+    "histoire": "^0.12.4",
+    "nuxt": "^3.0.0-rc.13"
+  },
+  "dependencies": {
+    "@pinia/nuxt": "^0.4.6",
+    "@vueuse/core": "^9.4.0",
+    "axios": "^1.2.2",
+    "eslint": "^8.27.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-vue": "^9.7.0",
+    "pinia": "^2.0.28",
+    "pinia-plugin-persistedstate": "^3.0.2",
+    "sass": "^1.56.1"
+  }
+}

@@ -1,0 +1,43 @@
+@font-face {
+  font-family: 'Montserrat';
+  src: local('Montserrat-Variable'),
+    url('/assets/fonts/Montserrat-Variable.woff2') format('woff2');
+}
+
+@mixin baselineSettings($height, $margin, $letterSpacing) {
+  font-stretch: normal;
+  font-style: normal;
+  font-family: 'Montserrat', sans-serif;
+  margin: $margin;
+  line-height: $height;
+  letter-spacing: $letterSpacing;
+}
+
+html * {
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 1.6rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  font-size: 2.6rem;
+}
+
+p {
+  // font-family: "Montserrat", sans-serif;
+  // font-family: Roboto, sans-serif;
+  // font-size: 2rem;
+}
+
+span {
+  // font-family: "Montserrat", sans-serif;
+  // font-family: Roboto, sans-serif;
+  // font-size: 2rem;
+}
