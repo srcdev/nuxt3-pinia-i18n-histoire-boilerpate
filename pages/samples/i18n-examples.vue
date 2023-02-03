@@ -52,7 +52,7 @@
           }}
         </p>
 
-        <h2>Vairable message depending on item count.</h2>
+        <h2>Variable message depending on item count.</h2>
         <code v-pre>
           &lt;p&gt;{{
             $t('i18nExamples.messageBasedOnItemCount', {
@@ -84,14 +84,16 @@
         </p>
         <h2>Compound html</h2>
         <p>Phone number is in reserved range so will not connect.</p>
-        <a :href="$t('i18nExamples.telephone.linkText')" target="_blank">{{
+        <a :href="$t('i18nExamples.telephone.href')">{{
           $t('i18nExamples.telephone.linkText')
         }}</a>
-
+        <h2>
+          Attempt to use (below) <strong>&lt;i18n&gt;</strong> results in error.
+        </h2>
         <i18n path="i18nExamples.telephone.text" tag="p" for="text">
           <template v-slot:text>
-            <a :href="$t('i18nExamples.telephone.linkText')" target="_blank">{{
-              $t('i18nExamples.telephone.href')
+            <a :href="$t('i18nExamples.telephone.href')">{{
+              $t('i18nExamples.telephone.linkText')
             }}</a>
           </template>
         </i18n>
