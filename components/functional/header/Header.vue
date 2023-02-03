@@ -1,7 +1,9 @@
 <template>
   <header class="header">
-    <h1>Header</h1>
-    <p>Header text</p>
+    <div class="header-inner">
+      <h1>Header</h1>
+      <p>Header text</p>
+    </div>
   </header>
 </template>
 
@@ -11,23 +13,22 @@
 @import '@/assets/styles/imports.scss';
 
 .header {
+  $self: &;
   background-color: red;
-  position: fixed;
-  left: 0%;
-  top: 0%;
-  // bottom: auto;
-  z-index: 150;
-  width: 100%;
-  height: $headerDepth;
+  margin: 0;
 
   &-inner {
-    align-items: center;
-    background-position: 0 0;
-    background-repeat: no-repeat;
-    background-size: 150%;
-    display: flex;
-    height: 100%;
-    padding: 0 5vw;
+    background-color: lightsalmon;
+    margin: 0 auto;
+    max-width: $max-content-width;
+    padding: 0 1.2rem;
+  }
+
+  &.wide {
+    background-color: blue;
+    #{ $self }-inner {
+      background-color: lightsteelblue;
+    }
   }
 }
 </style>

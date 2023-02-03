@@ -16,9 +16,30 @@ import Footer from '@/components/functional/footer/Footer.vue'
 <style lang="scss">
 @import '@/assets/styles/imports.scss';
 
-.page-wrapper {
-  min-height: 100vh;
-  padding-bottom: $footerDepth;
-  padding-top: $headerDepth;
+.page {
+  $self: &;
+  &-wrapper {
+    background-color: lightblue;
+  }
+  &-row {
+    $self: &;
+    border: 1px solid black;
+    background-color: lightgrey;
+    margin: 0;
+
+    &-inner {
+      background-color: lightsalmon;
+      margin: 0 auto;
+      max-width: $max-content-width;
+      padding: 0 1.2rem;
+    }
+
+    &.wide {
+      background-color: blue;
+      #{ $self }-inner {
+        background-color: lightsteelblue;
+      }
+    }
+  }
 }
 </style>

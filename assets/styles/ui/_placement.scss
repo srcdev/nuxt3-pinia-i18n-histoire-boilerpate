@@ -2,6 +2,19 @@
 * <div placement="top-left"></siv>
 * <div placement="bottom-right"></siv>
 **/
+[direction] {
+  display: flex;
+  gap: 12px;
+}
+
+[direction^="column"] {
+  flex-direction: column;
+}
+
+[direction^="reverse"] {
+  flex-flow: reverse;
+}
+
 [placement] {
   display: flex;
 }
