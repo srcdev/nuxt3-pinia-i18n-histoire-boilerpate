@@ -1,6 +1,6 @@
 <template>
-  <header class="header">
-    <div class="header-inner">
+  <header class="header wide">
+    <div class="header-inner wide">
       <h1>Header</h1>
       <p>Header text</p>
     </div>
@@ -21,7 +21,11 @@
     background-color: lightsalmon;
     margin: 0 auto;
     max-width: $max-content-width;
-    padding: 0 1.2rem;
+    padding: 0 $content-padding-width;
+
+    &.wide {
+      max-width: initial;
+    }
   }
 
   &.wide {

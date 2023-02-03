@@ -22,7 +22,10 @@
             </code>
             -
             <p v-text="$t('i18nExamples.simpleTextKey')"></p>
-
+          </div>
+        </div>
+        <div class="page-row wide">
+          <div class="page-row-inner wide">
             <h2>
               Text display with variable. (Displays the number 12 within string)
             </h2>

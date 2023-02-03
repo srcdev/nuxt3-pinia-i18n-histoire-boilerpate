@@ -35,9 +35,12 @@ const copyYear = new Date().getFullYear()
     flex-direction: column;
     margin: 0 auto;
     max-width: $max-content-width;
-    padding: 0 1.2rem;
-  }
+    padding: $content-padding-width;
 
+    &.wide {
+      max-width: initial;
+    }
+  }
 
   &-links {
     &-list {
@@ -48,7 +51,7 @@ const copyYear = new Date().getFullYear()
     }
     &-link {
       display: block;
-      padding: 0.6rem 1.2rem;
+      padding: 0.6rem $content-padding-width;
     }
   }
 
@@ -59,6 +62,4 @@ const copyYear = new Date().getFullYear()
     }
   }
 }
-
-
 </style>

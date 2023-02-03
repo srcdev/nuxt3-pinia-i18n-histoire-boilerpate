@@ -1,7 +1,10 @@
 <template>
   <div class="page-wrapper">
     <Header></Header>
-    <slot name="content"></slot>
+    <div class="content-wrapper">
+      <slot name="content"></slot>
+    </div>
+
     <Footer></Footer>
   </div>
 </template>
@@ -31,7 +34,11 @@ import Footer from '@/components/functional/footer/Footer.vue'
       background-color: lightsalmon;
       margin: 0 auto;
       max-width: $max-content-width;
-      padding: 0 1.2rem;
+      padding: 0 $content-padding-width;
+
+      &.wide {
+        max-width: initial;
+      }
     }
 
     &.wide {
@@ -40,6 +47,12 @@ import Footer from '@/components/functional/footer/Footer.vue'
         background-color: lightsteelblue;
       }
     }
+  }
+}
+
+.content {
+  &-wrapper {
+    padding: 0 $content-gutter-width;
   }
 }
 </style>
