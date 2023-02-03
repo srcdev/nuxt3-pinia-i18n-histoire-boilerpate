@@ -22,31 +22,7 @@ import Footer from '@/components/functional/footer/Footer.vue'
 .page {
   $self: &;
   &-wrapper {
-    background-color: lightblue;
-  }
-  &-row {
-    $self: &;
-    border: 1px solid black;
-    background-color: lightgrey;
-    margin: 0;
-
-    &-inner {
-      background-color: lightsalmon;
-      margin: 0 auto;
-      max-width: $max-content-width;
-      padding: 0 $content-padding-width;
-
-      &.wide {
-        max-width: initial;
-      }
-    }
-
-    &.wide {
-      background-color: blue;
-      #{ $self }-inner {
-        background-color: lightsteelblue;
-      }
-    }
+    background-color: $page-bg-light;
   }
 }
 

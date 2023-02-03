@@ -1,22 +1,27 @@
 <template>
-  <footer class="footer">
-    <div class="footer-inner">
-      <p>&copy;{{ copyYear }}</p>
-      <ul class="footer-links-list">
-        <li class="footer-links-item">
-          <NuxtLink to="/" class="footer-links-link">Home</NuxtLink>
-        </li>
-        <li class="footer-links-item">
-          <NuxtLink to="/samples/i18n-examples" class="footer-links-link"
-            >i18n</NuxtLink
-          >
-        </li>
-      </ul>
-    </div>
-  </footer>
+  <PageRow :isWide="true">
+    <template #content>
+      <footer class="footer">
+        <div class="footer-inner">
+          <p>&copy;{{ copyYear }}</p>
+          <ul class="footer-links-list">
+            <li class="footer-links-item">
+              <NuxtLink to="/" class="footer-links-link">Home</NuxtLink>
+            </li>
+            <li class="footer-links-item">
+              <NuxtLink to="/samples/i18n-examples" class="footer-links-link"
+                >i18n</NuxtLink
+              >
+            </li>
+          </ul>
+        </div>
+      </footer>
+    </template>
+  </PageRow>
 </template>
 
 <script setup lang="ts">
+import PageRow from '@/components/functional/page-row/PageRow.vue'
 const copyYear = new Date().getFullYear()
 </script>
 
@@ -25,21 +30,11 @@ const copyYear = new Date().getFullYear()
 
 .footer {
   $self: &;
-  background-color: red;
-  margin: 0;
 
   &-inner {
     align-items: center;
-    background-color: lightsalmon;
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
-    max-width: $max-content-width;
-    padding: $content-padding-width;
-
-    &.wide {
-      max-width: initial;
-    }
   }
 
   &-links {
@@ -52,13 +47,6 @@ const copyYear = new Date().getFullYear()
     &-link {
       display: block;
       padding: 0.6rem $content-padding-width;
-    }
-  }
-
-  &.wide {
-    background-color: blue;
-    #{ $self }-inner {
-      background-color: lightsteelblue;
     }
   }
 }

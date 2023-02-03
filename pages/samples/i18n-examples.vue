@@ -2,14 +2,15 @@
   <div>
     <NuxtLayout name="normal">
       <template #content>
-        <div class="page-row wide">
-          <div class="page-row-inner">
+        <PageRow>
+          <template #content>
             <h2>(WIDE) Example of internationalisation (i18n)</h2>
             <p>How to implement the various different i18n text outputs.</p>
-          </div>
-        </div>
-        <div class="page-row">
-          <div class="page-row-inner">
+          </template>
+        </PageRow>
+
+        <PageRow :isWide="true">
+          <template #content>
             <h2>(NORMAL) Simple text display</h2>
             <code v-pre>
               &lt;p&gt;{{ $t('i18nExamples.simpleTextKey') }}&lt;/p&gt;
@@ -22,10 +23,11 @@
             </code>
             -
             <p v-text="$t('i18nExamples.simpleTextKey')"></p>
-          </div>
-        </div>
-        <div class="page-row wide">
-          <div class="page-row-inner wide">
+          </template>
+        </PageRow>
+
+        <PageRow>
+          <template #content>
             <h2>
               Text display with variable. (Displays the number 12 within string)
             </h2>
@@ -90,6 +92,11 @@
                 })
               }}
             </p>
+          </template>
+        </PageRow>
+
+        <PageRow>
+          <template #content>
             <h2>Compound html</h2>
             <p>Phone number is in reserved range so will not connect.</p>
             <a :href="$t('i18nExamples.telephone.href')">{{
@@ -106,14 +113,15 @@
                 }}</a>
               </template>
             </i18n>
-          </div>
-        </div>
+          </template>
+        </PageRow>
       </template>
     </NuxtLayout>
   </div>
 </template>
 
 <script setup lang="ts">
+import PageRow from '@/components/functional/page-row/PageRow.vue'
 definePageMeta({
   layout: false,
 })
