@@ -12,16 +12,7 @@
         <PageRow :isWide="true">
           <template #content>
             <h2>(NORMAL) Simple text display</h2>
-            <code v-pre>
-              &lt;p&gt;{{ $t('i18nExamples.simpleTextKey') }}&lt;/p&gt;
-            </code>
-            -
             <p>{{ $t('i18nExamples.simpleTextKey') }}</p>
-            -
-            <code v-pre>
-              &lt;p v-text="$t('i18nExamples.simpleTextKey')"&gt;&lt;p&gt;
-            </code>
-            -
             <p v-text="$t('i18nExamples.simpleTextKey')"></p>
           </template>
         </PageRow>
@@ -31,27 +22,11 @@
             <h2>
               Text display with variable. (Displays the number 12 within string)
             </h2>
-            <code v-pre>
-              &lt;p&gt;{{
-                $t('i18nExamples.simpleTextKeyWithVar', { count: 12 })
-              }}&lt;/p&gt;
-            </code>
-            -
             <p>
               {{ $t('i18nExamples.simpleTextKeyWithSingleVar', { count: 12 }) }}
             </p>
 
             <h2>Text display with multiple variables.</h2>
-            <code v-pre>
-              &lt;p&gt;{{
-                $t('i18nExamples.simpleTextKeyWithManyVars', {
-                  count1: 3,
-                  count2: 1,
-                  count3: 12,
-                })
-              }}&lt;/p&gt;
-            </code>
-            -
             <p>
               {{
                 $t('i18nExamples.simpleTextKeyWithManyVars', {
@@ -63,14 +38,6 @@
             </p>
 
             <h2>Variable message depending on item count.</h2>
-            <code v-pre>
-              &lt;p&gt;{{
-                $t('i18nExamples.messageBasedOnItemCount', {
-                  count: 0,
-                })
-              }}&lt;/p&gt;
-            </code>
-            -
             <p>
               {{
                 $t('i18nExamples.messageBasedOnItemCount', {
@@ -97,14 +64,14 @@
 
         <PageRow>
           <template #content>
-            <h2>Compound html</h2>
+            <h2>Compound html (incorrect way)</h2>
             <p>Phone number is in reserved range so will not connect.</p>
             <a :href="$t('i18nExamples.telephone.href')">{{
               $t('i18nExamples.telephone.linkText')
             }}</a>
             <h2>
-              Attempt to use (below) <strong>&lt;i18n&gt;</strong> results in
-              error.
+              Now attempt to use (below) <strong>&lt;i18n&gt;</strong> results
+              in error.
             </h2>
             <i18n path="i18nExamples.telephone.text" tag="p" for="text">
               <template v-slot:text>
