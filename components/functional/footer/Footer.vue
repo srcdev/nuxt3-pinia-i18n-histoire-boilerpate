@@ -29,7 +29,7 @@ const copyYear = new Date().getFullYear()
 @import '@/assets/styles/imports.scss';
 
 .footer {
-  $self: &;
+  // $self: &;
 
   &-inner {
     align-items: center;
@@ -42,8 +42,8 @@ const copyYear = new Date().getFullYear()
       display: flex;
       list-style-type: none;
     }
-    &-item {
-    }
+    // &-item {
+    // }
     &-link {
       display: block;
       padding: 0.6rem $content-padding-width;

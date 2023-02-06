@@ -5,6 +5,7 @@
         <div class="header-inner">
           <h1>Header</h1>
           <p>Header text</p>
+          <!-- <p>{{ t('header.text') }}</p> -->
         </div>
       </header>
     </template>
@@ -12,16 +13,19 @@
 </template>
 
 <script setup lang="ts">
+// import { useI18n } from 'vue-i18n'
 import PageRow from '@/components/functional/page-row/PageRow.vue'
+
+// const { t } = useI18n({ useScope: 'global' })
 </script>
 
 <style lang="scss">
 @import '@/assets/styles/imports.scss';
 
-.header {
-  $self: &;
+// .header {
+//   $self: &;
 
-  &-inner {
-  }
-}
+//   &-inner {
+//   }
+// }
 </style>

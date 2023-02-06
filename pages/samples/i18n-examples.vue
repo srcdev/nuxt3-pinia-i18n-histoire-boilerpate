@@ -81,6 +81,7 @@
                 }}</a>
               </template>
             </i18n-t>
+            <p>Phone number is in reserved range so will not connect.</p>
           </template>
         </PageRow>
       </template>
@@ -106,7 +107,7 @@ useHead({
     class: 'class-to-apply-if-desired',
   },
 })
-// const { t } = useI18n()
+
 const { t } = useI18n({ useScope: 'global' })
 </script>
 

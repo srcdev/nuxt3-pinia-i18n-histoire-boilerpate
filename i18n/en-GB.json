@@ -1,6 +1,6 @@
 {
   "header": {
-    "text": "Header text"
+    "text": "Header text from i18ns"
   },
   "i18nExamples": {
     "simpleTextKey": "This is a simple single entry key/value pair",

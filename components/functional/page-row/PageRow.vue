@@ -19,9 +19,9 @@ const { isWide } = defineProps({
 @import '@/assets/styles/imports.scss';
 
 .page {
-  $self: &;
+  // $self: &;
   &-row {
-    $self: &;
+    // $row: &;
 
     margin: 0;
 
@@ -35,10 +35,10 @@ const { isWide } = defineProps({
       }
     }
 
-    &.wide {
-      #{ $self }-inner {
-      }
-    }
+    // &.wide {
+    //   #{ $row }-inner {
+    //   }
+    // }
 
     // & * {
     //   border: 1px solid black;
