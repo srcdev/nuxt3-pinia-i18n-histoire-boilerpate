@@ -3,8 +3,29 @@ import { defineNuxtConfig } from 'nuxt/config'
 export default defineNuxtConfig({
   ssr: false,
   css: ['~/assets/styles/index.scss'],
-  plugins: ['~/plugins/i18n.ts'],
+  plugins: ['@/plugins/i18n'],
   modules: ['@pinia/nuxt'],
+  // modules: [
+  //   '@pinia/nuxt',
+  //   [
+  //     '@nuxtjs/i18n',
+  //     {
+  //       locales: [
+  //         {
+  //           code: 'en',
+  //           file: 'en-GB.json',
+  //           name: 'English',
+  //         },
+  //       ],
+  //       // lazy: true,
+  //       langDir: '@/i18n',
+  //       defaultLocale: 'en',
+  //       globalInjection: false,
+  //       legacy: false,
+  //       useScope: 'global',
+  //     },
+  //   ],
+  // ],
   imports: {
     dirs: ['stores'],
   },
