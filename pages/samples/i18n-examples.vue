@@ -74,7 +74,11 @@
               in error.
             </h2>
 
-            <i18n-t keypath="i18nExamples.telephone.text" tag="p">
+            <i18n-t
+              keypath="i18nExamples.telephone.text"
+              tag="p"
+              scope="global"
+            >
               <template #link>
                 <a :href="t('i18nExamples.telephone.href')">{{
                   t('i18nExamples.telephone.linkText')
@@ -108,7 +112,7 @@ useHead({
   },
 })
 
-const { t } = useI18n({ useScope: 'global' })
+const { t } = useI18n()
 </script>
 
 <style lang="scss">
