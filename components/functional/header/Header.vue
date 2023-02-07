@@ -7,7 +7,7 @@
           <p>Header text</p>
           <p>{{ t('header.text') }}</p>
           <p v-text="t('header.text')"></p>
-          <p v-t="t('header.text')"></p>
+          <p v-t="'header.text'"></p>
         </div>
       </header>
     </template>
