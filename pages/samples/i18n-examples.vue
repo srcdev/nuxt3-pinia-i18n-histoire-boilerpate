@@ -6,6 +6,7 @@
           <template #content>
             <h2>(WIDE) Example of internationalisation (i18n)</h2>
             <p>How to implement the various different i18n text outputs.</p>
+            <p>{{ t('header.text') }}</p>
           </template>
         </PageRow>
 

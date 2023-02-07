@@ -5,10 +5,10 @@ import { HstNuxt } from '@histoire/plugin-nuxt'
 
 export default defineConfig({
   plugins: [HstVue(), HstNuxt()],
-  // setupFile: {
-  //   browser: './histoire-setup',
-  //   server: './histoire-setup.server',
-  // },
+  setupFile: {
+    browser: './histoire-setup',
+    // server: './histoire-setup.server',
+  },
   vite: {
     // ssr: false,
     // css: ['./assets/styles/index.scss'],
