@@ -88,6 +88,25 @@
             <p>Phone number is in reserved range so will not connect.</p>
           </template>
         </PageRow>
+        <PageRow>
+          <template #content>
+            <h2>Multiple slots</h2>
+            <i18n-t
+              keypath="i18nExamples.changeFlight.info"
+              tag="p"
+              scope="global"
+            >
+              <template #limit>
+                <span>{{ t('i18nExamples.changeFlight.changeLimit') }}</span>
+              </template>
+              <template #action>
+                <a :href="t('i18nExamples.changeFlight.changeUrl')">{{
+                  t('i18nExamples.changeFlight.change')
+                }}</a>
+              </template>
+            </i18n-t>
+          </template>
+        </PageRow>
       </template>
     </NuxtLayout>
   </div>

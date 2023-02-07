@@ -11,6 +11,13 @@
       "text": "Tel: {link}",
       "href": "tel:+447700912123",
       "linkText": "07700 912 123"
+    },
+    "changeFlight": {
+      "info": "You can {action} until {limit} minutes from departure.",
+      "change": "change your flight",
+      "changeLimit": "15",
+      "changeUrl": "/change",
+      "refund": "refund the ticket"
     }
   }
 }
